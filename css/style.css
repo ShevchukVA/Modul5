@@ -172,15 +172,6 @@ h2::after {
     line-height: 22px;
     text-transform: uppercase;
 }
-.new-collection-list-item:hover .hover-block {
-    background-color: rgba(78, 73, 78, 0.549);    
-}
-.new-collection-list-item:hover .new-collection-list-name {
-    background-color: #1abc9c;
-}
-.new-collection-list-item:hover .new-collection-list-price {
-    background-color: #7fd9c7;
-}
 .new-collection-list-name {
     float: left;
     width: 200px;
@@ -197,16 +188,11 @@ h2::after {
     text-align: center;
     padding-top: 10px;
 }
-.new-collection-list-item:hover .icon-arrows {
-    background-color: #1abc9c;   
-}
 
 .hover-block {
-    width: 235px;
-    height: 262px;
+    width: 255px;
+    height: 282px;
     position: absolute;
-    top:10px;
-    left: 10px;
     text-align: center;
     padding-top: 80px;
 }
@@ -229,12 +215,12 @@ h2::after {
     margin-bottom: 8px;
     background-repeat: no-repeat;
     background-position: center;
+    opacity: 0;
 }
 .icon-heard {
     background-image: url('../img/icons/icon-heart.png');
 }
 .icon-arrows {
-    background-color: #1abc9c;
     background-image: url('../img/icons/icon-arrows.png');
 }
 .icon-clock {
@@ -252,12 +238,10 @@ h2::after {
     display: inline-block;
     width: 166px;
     height: 50px;
-    border: 1px solid rgb(255, 255, 255);
     position: relative;
     padding-top: 16px;
     padding-left: 40px;
-    background-color: #323232;
-    opacity: 1;
+    opacity: 0;
 }
 .add-to-card::before {
     display: inline-block;
@@ -270,6 +254,33 @@ h2::after {
     position: absolute;
     top: 8px;
     left: 10px;
+    opacity: 0;
+}
+/* HOVER EFFECT */
+.new-collection-list-item:hover .hover-block {
+    background-color: rgba(78, 73, 78, 0.549);
+    border: 10px solid rgba(255, 255, 255, 0.549);
+}
+.new-collection-list-item:hover .add-to-card {
+    background-color: #323232;
+    border: 1px solid rgb(255, 255, 255);
+    opacity: 1;
+}
+.new-collection-list-item:hover .add-to-card::before {
+    opacity: 1;
+}
+.new-collection-list-item:hover .hover-list a{
+    opacity: 1;
+}
+
+.new-collection-list-item:hover .new-collection-list-name {
+    background-color: #1abc9c;
+}
+.new-collection-list-item:hover .new-collection-list-price {
+    background-color: #7fd9c7;
+}
+.new-collection-list-item:hover .icon-arrows {
+    background-color: #1abc9c;   
 }
 
 /* PAGE_FOOTER */
