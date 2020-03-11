@@ -72,11 +72,11 @@ img {
     position: relative;
     background-image: url('../img/slide.png');
     background-color: rgba(0, 0, 2, 0.522);
+    background-blend-mode: darken;
     background-size: cover;
 }
 .slider-arrow {
     list-style: none;
-    width: 1110px;
     position: absolute;
     top: 220px;
     left: 50%;
@@ -118,14 +118,10 @@ button {
 .slider button:focus {
     opacity: 0.522;
 }
-.first-word:hover,
-.first-word:focus {
-    color: #ff7200;
-}
 
 /* section new-collection */
 
-h2 {
+.new-collection-title {
     font-family: "Roboto", sans-serif;
     text-align: center;
     font-size: 48px;
@@ -133,14 +129,13 @@ h2 {
     line-height: 52px;
     color: #515151;
     position: relative;
-    padding-bottom: 40px;
-    margin-bottom: 80px;
+    margin-bottom: 115px;
 }
-h2::after {
-    margin-top: 32px;
+.new-collection-title::after {
+    margin-top: 27px;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 100%;
     transform: translate(-50%, -50%);
     width: 164px;
     height: 7px;
@@ -200,6 +195,7 @@ h2::after {
     display: inline-block;
     list-style: none;
     font-size: 0;
+    margin-bottom: 8px;
 } 
 .hover-list li {
     display: inline-block;
@@ -212,7 +208,6 @@ h2::after {
     width: 50px;
     height: 50px;
     border: 1px solid rgb(255, 255, 255);
-    margin-bottom: 8px;
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0;
@@ -279,7 +274,7 @@ h2::after {
 .new-collection-list-item:hover .new-collection-list-price {
     background-color: #7fd9c7;
 }
-.new-collection-list-item:hover .icon-arrows {
+.hover-list a:hover {
     background-color: #1abc9c;   
 }
 
