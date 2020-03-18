@@ -14,9 +14,9 @@ body {
     font-weight: 900;
     letter-spacing: -0.02em;
 }
-.clearfix::after {
+.clearfix::before, ::after {
     display: table;
-    content: '';
+    content:'';
     clear: both;
 }
 .container {
@@ -34,8 +34,8 @@ img {
     font-family: "Open Sans", "Arial", sans-serif;
 }
 .page-nav {
-    padding-top: 38px;
-    padding-bottom: 32px;
+    margin-top: 38px;
+    margin-bottom: 32px;
 }
 .site-logo {
     float: left;
@@ -120,7 +120,10 @@ button {
 }
 
 /* section new-collection */
-
+.new-collection {
+    height: 678px;
+    background-color: #e9f0fd;
+}
 .new-collection-title {
     font-family: "Roboto", sans-serif;
     text-align: center;
@@ -129,7 +132,10 @@ button {
     line-height: 52px;
     color: #515151;
     position: relative;
+    left: 50%;
+    transform: translate(-50%);
     margin-bottom: 115px;
+    margin-top: 100px;
 }
 .new-collection-title::after {
     margin-top: 27px;
@@ -141,11 +147,6 @@ button {
     height: 7px;
     background-color: #1abc9c;
     content: '';
-}
-.new-collection {
-    height: 678px;
-    padding-top: 100px;
-    background-color: #e9f0fd;
 }
 .new-collection-list {
     list-style: none;
@@ -257,9 +258,11 @@ button {
     border: 10px solid rgba(255, 255, 255, 0.549);
 }
 .new-collection-list-item:hover .add-to-card {
-    background-color: #323232;
     border: 1px solid rgb(255, 255, 255);
     opacity: 1;
+}
+.new-collection-list-item .add-to-card:hover {
+    background-color: #323232;
 }
 .new-collection-list-item:hover .add-to-card::before {
     opacity: 1;
@@ -285,10 +288,12 @@ button {
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-    padding-top: 37px;
-    padding-bottom: 35px;
     text-align: center;
     background-color: #323232;
+}
+.page-footer-text {
+    margin-top: 37px;
+    margin-bottom: 35px;
 }
 .word {
     color: #419989;
