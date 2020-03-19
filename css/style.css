@@ -121,7 +121,6 @@ button {
 
 /* section new-collection */
 .new-collection {
-    height: 678px;
     background-color: #e9f0fd;
 }
 .new-collection-title {
@@ -151,6 +150,7 @@ button {
 .new-collection-list {
     list-style: none;
     font-size: 0;
+    margin-bottom: 98px;
 }
 .new-collection-list-item {
     display: inline-block;
